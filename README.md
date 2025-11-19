@@ -1,65 +1,66 @@
-# 🤖 IASA – Agente Autónomo com Planeamento e Decisão Sequencial
+# 🤖 IASA – Autonomous Agent with Planning and Sequential Decision-Making
 
-> Projeto da unidade curricular **Inteligência Artificial para Sistemas Autónomos (IASA)**  
-> Licenciatura em Engenharia Informática e Multimédia – **ISEL**  
-> Ano letivo **2024 / 2025**
-
----
-
-## 👤 Autor
-
-- **Nome:** Miguel Cordeiro  
-- **Número:** 49765  
-- **Docente:** Luís Morgado  
+> Project for the course **Inteligência Artificial para Sistemas Autónomos (IASA)**  
+> BSc in Computer Engineering and Multimedia – **ISEL**  
+> Academic year **2024 / 2025**
 
 ---
 
-## 📝 Descrição do Projeto
+## 👤 Author
 
-Este repositório reúne o trabalho desenvolvido no âmbito da unidade curricular **Inteligência Artificial para Sistemas Autónomos (IASA)**, focada no estudo e implementação de **agentes autónomos** com capacidades de **decisão, raciocínio e aprendizagem**, complementado com boas práticas de **Engenharia de Software**.
-
-Ao longo de quatro partes, o projeto evolui de um agente puramente reativo até um agente deliberativo capaz de **planear, avaliar opções** e **tomar decisões sequenciais sob incerteza**, integrando conceitos como:
-
-- arquiteturas **reativas**, **deliberativas** e **híbridas**  
-- **procura em espaço de estados** (incluindo A* e Custo Uniforme)  
-- **Processos de Decisão de Markov (PDM)**  
-- noções de **aprendizagem por reforço** e decisão baseada em recompensas  
-
-O resultado final é um agente que **observa**, **delibera**, **planeia** e **atua** num ambiente simulado, seguindo uma arquitetura modular e extensível.
+- **Name:** Miguel Cordeiro  
+- **Student Number:** 49765  
+- **Instructor:** Luís Morgado  
 
 ---
 
-## 🎯 Objetivos de Aprendizagem
+## 📝 Project Description
 
-- Implementar e comparar diferentes **arquiteturas de agente** (reativo vs deliberativo).  
-- Aplicar técnicas de **Engenharia de Software**:  
-  - abstração, modularização e fatorização  
-  - uso de diagramas UML como base da implementação  
-  - baixo acoplamento e alta coesão  
-- Explorar **técnicas de procura**:
-  - procura não informada (largura, profundidade, profundidade limitada, profundidade iterativa)  
-  - procura informada (heurísticas, custo, A*, custo uniforme, greedy)  
-- Construir agentes com:
-  - **comportamentos reativos hierárquicos**, com ou sem memória  
-  - **planeamento automático** em espaço de estados  
-  - **decisão sequencial** com Processos de Decisão de Markov
+This repository contains the work developed for the course **Inteligência Artificial para Sistemas Autónomos (IASA)**, focused on the study and implementation of **autonomous agents** with capabilities for **decision-making, reasoning and learning**, complemented with good **Software Engineering** practices.
+
+Across four stages, the project evolves from a purely reactive agent to a deliberative agent capable of **planning, evaluating options** and **making sequential decisions under uncertainty**, integrating concepts such as:
+
+- **reactive**, **deliberative** and **hybrid** architectures  
+- **state-space search** (including A* and Uniform Cost Search)  
+- **Markov Decision Processes (MDP)**  
+- basic notions of **reinforcement learning** and reward-based decision-making  
+
+The final result is an agent that **perceives**, **deliberates**, **plans** and **acts** in a simulated environment, following a modular and extensible architecture.
 
 ---
 
-## 🎥 Demonstração em Vídeo
+## 🎯 Learning Objectives
 
-[![Ver demonstração em vídeo](media/thumb_demo.png)](media/demo.mp4)
-
+- Implement and compare different **agent architectures** (reactive vs deliberative).  
+- Apply **Software Engineering** techniques:  
+  - abstraction, modularization and factorization  
+  - use of UML diagrams as a basis for implementation  
+  - low coupling and high cohesion  
+- Explore **search techniques**:
+  - uninformed search (breadth-first, depth-first, depth-limited, iterative deepening)  
+  - informed search (heuristics, cost, A*, uniform-cost, greedy)  
+- Build agents with:
+  - **hierarchical reactive behaviours**, with or without memory  
+  - **automatic planning** in state space  
+  - **sequential decision-making** with Markov Decision Processes  
 
 ---
 
-## 🧠 Visão Geral da Arquitetura
+## 🎥 Project Demo
 
-A nível abstrato, o agente segue o ciclo clássico:
+[![Click the image to watch the video demo](media/thumb_demo.png)](https://youtu.be/_BO9eytQb0c "Watch on YouTube")
+
+> 👉 **Click the image above** to watch the full demonstration of the agent in action on YouTube.
+
+---
+
+## 🧠 High-Level Architecture Overview
+
+At an abstract level, the agent follows the classic perception–decision–action loop:
 
 ```mermaid
 flowchart LR
-    P[Perceção] --> C[Controlo]
-    C --> A[Ação]
-    A --> E[Ambiente]
+    P[Perception] --> C[Control]
+    C --> A[Action]
+    A --> E[Environment]
     E --> P
